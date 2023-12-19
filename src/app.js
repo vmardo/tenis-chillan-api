@@ -2,10 +2,16 @@
 import express from "express";
 import router from "./routes/productoRoute.js";
 //aca vamos importar router creado en productoRoute.js
-
+//aca vamos importar dotenv
+import dotenv from "dotenv"
+import { conectDb } from "./db.js";
+//METODO DE DOTENV
+dotenv.config();
 
 //indicando a nuestra aplicacion que utilizaremos express(instancia de express)
 const app = express();
+//nuestro puerto va tomar el valor que devuelva dotenv
+const PORT = process.env.PORT || 3000 ;
 
 //crear ruta
 //req:este objeto contiene informacion sobre la solicitud del cliente
@@ -19,16 +25,20 @@ const app = express();
 //    });
 
 
+//conexion base de datos
+conectDb();
+
+
 //usar nuestro router,aca productos queda como prefijo para las demas rutas...
 app.use("/productos",router)
 
 
 //levantando servidor del express
-const puerto = 3000;
+//const puerto = 3000;
 
 //metodo listen que sirve para escuchar nuestra aplicacion en el puerto señalado. //----> (puerto,funcion)
-app.listen(puerto,()=>{
-    console.log("El servidor de Express esta escuchando en el puerto:" + puerto)
+app.listen(PORT,()=>{
+    console.log("El servidor de Express esta escuchando en el puerto:" + PORT)
     
 })  
 
