@@ -1,5 +1,7 @@
 //importando express
 import express from "express";
+//importamos cors para solucionar consultas a la api(ya que no se encontraba en su dominio)
+import cors from "cors"
 import router from "./routes/productoRoute.js";
 //aca vamos importar router creado en productoRoute.js
 //aca vamos importar dotenv
@@ -27,7 +29,8 @@ const PORT = process.env.PORT || 3000 ;
 
 //conexion base de datos
 conectDb();
-
+//configurando cors
+app.use(cors())
 
 //usar nuestro router,aca productos queda como prefijo para las demas rutas...
 app.use("/productos",router)
