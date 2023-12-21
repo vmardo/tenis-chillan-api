@@ -4,21 +4,15 @@
 //El serivicio trabaja con el Modelo
 import Producto from "../models/productoModel.js";
 
-const productos = [
-    new Producto(1,"Raqueta",179990),
-    new Producto(2,"Pelota",9990),
-    new Producto(3,"Polera",19990),
-
-]
 
 //metodo que nos devuelva todos los productos
 
-const getAllProductos = ()=> {
-    return productos;
+const getAllProductos = async()=> {
+    return await Producto.find();
 }
 
-const getProductosById = () => {
-    return productos.find(producto => producto.id === producto.id)
+const getProductoById = async productoId => {
+    return await Producto.findById(productoId)
 }
 
-export {getAllProductos,getProductosById}
+export {getAllProductos,getProductoById}
