@@ -29,7 +29,7 @@ const PORT = process.env.PORT || 3000 ;
 
 //conexion base de datos
 conectDb();
-//configurando cors
+//configurando corsls
 app.use(cors())
 
 //usar nuestro router,aca productos queda como prefijo para las demas rutas...
