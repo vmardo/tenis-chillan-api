@@ -2,7 +2,11 @@
 
         //Registro
         import {crearUsuario,getUsuarioByEmail} from "../services/usuarioService.js";
-        import bcrypt from "bcrypt"
+        import bcrypt from "bcrypt";
+        import jwt from "jsonwebtoken";
+        import dotenv from "dotenv";
+
+        dotenv.config();
 
         //creamos nuestra funcion de registro
         //aca debemos extraer los parametros 
@@ -28,8 +32,13 @@
         //guardar usuario
         const usuario = await crearUsuario(nombre,email,password);
 
+        //GENERAR TOKEN DE ACCESO
+        //payload es la informacion que queremos incluir en nuestro TOKEN(EJEMPLO ID,PASSWORD)
+        //sing ---> sus parametros son (payload,claveSecreta,variables de opeciones(tiempo de duracion))
+        const accessTOKEN = jwt.sign({userId: usuario._id} , process.env.SECRET_KEY,{expiresIn:"1h"})
+
         res.status(201).json({
-            message: "Usuario creado con exito"
+            accessTOKEN
         })
 
         } catch (error) {
@@ -66,9 +75,14 @@
             })
         }
 
+        //en esta seccion ya hemos validado un Login exitoso
+        //generar un token de acceso
+        const accessTOKEN = jwt.sign({userId: usuario._id} , process.env.SECRET_KEY,{expiresIn:"1h"})
+
         res.status(201).json({
-            message: "Login exitoso Bienvenido!"
+            accessTOKEN
         })
+
         } catch (error) {
         console.error(error);
         res.status(500).json({
