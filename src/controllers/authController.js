@@ -1,7 +1,8 @@
-        //aca vamos hacer los metodos clasicos de auntenticacion.Registro y Login
+//aca vamos hacer los metodos clasicos de auntenticacion.Registro y Login
 
         //Registro
         import {crearUsuario,getUsuarioByEmail} from "../services/usuarioService.js";
+        import bcrypt from "bcrypt"
 
         //creamos nuestra funcion de registro
         //aca debemos extraer los parametros 
@@ -38,22 +39,42 @@
                 })
         }
         
-}
+    }
     
 
-
-
-
-    export const login = async (req,res) => {
-    console.log("logeando usuario...")
+        export const login = async (req,res) => {
     
+            const {email,password} = req.body;
+            try {
+                
+           
+            //verificar si el usuario existe
+            const usuario = await getUsuarioByEmail(email);
+            if(usuario){
+            //si no se encuentra el usuario por su correo,devolver message: crednciales invalidas
+            return res.status(401).json({
+            message: "Credenciales invalidas"
+        })
+        
+     }
 
-    res.status(201).json({
-        message: "Usuario creado con exito"
-    })
+        const passwordValida = await bcrypt.compare(password,usuario.password);
 
-    } 
-       
+        if(!password){
+            return res.status(401).json({
+                message: "Credenciales invalidas"
+            })
+        }
 
+        res.status(201).json({
+            message: "Login exitoso Bienvenido!"
+        })
+        } catch (error) {
+        console.error(error);
+        res.status(500).json({
+        massage: "Ha ocurrido un error al iniciar sesion"
+                                                              })    
+        }
+     }
 
-
+     
