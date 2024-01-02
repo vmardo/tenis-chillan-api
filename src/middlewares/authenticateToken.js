@@ -1,36 +1,40 @@
-//este archivo nos va servir para proteger los recursos de nuestra API
-//jwt para comprobar la seguridad.
-import jwt from "jsonwebtoken";
+import jwt from 'jsonwebtoken';
+import { getUsuarioById } from '../services/usuarioService.js';
+import dotenv from 'dotenv';
+
+dotenv.config();
 
 //funcion encargada de verificar el token
-const authenticateToken = async (req,res,next) => {
+export const authenticateToken = async (req, res, next) => {
+
     try {
-      
-        const authorizationHeader = req.headers.authorization
-
-        const accessToken = authorizationHeader && authorizationHeader.split(" ")[1];
-
-        console.log(accessToken);
-
-        if (!accessToken) {
-            return res.status(401).json({
-                message: "No se ha proporcianado un token de acceso"
-            })
-
-        }
         
+        const authorizationHeader = req.headers.authorization;
+        const accessToken = authorizationHeader && authorizationHeader.split(' ')[1];
 
 
+        if(!accessToken){
+            return res.status(401).json({
+                message: 'No se ha proporcionado un token de acceso'
+            })
+        }
+
+        const tokenDecodificado = jwt.verify(accessToken, process.env.SECRET_KEY );
+        const usuario = await getUsuarioById(tokenDecodificado.userId);
+
+        if(!usuario){
+            return res.status(401).json({
+                message: 'Token de acceso no valido'
+            })
+        }
+
+        req.usuario = usuario;
         next();
 
-        //acceso al producto llamar a la funcion next
-
-    } catch (error) {
+    } catch ( error ) {
         
+
 
     }
 
-
 }
-
-export default authenticateToken;

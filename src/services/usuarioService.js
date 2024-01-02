@@ -23,10 +23,48 @@ export const crearUsuario = async (nombre,email,password) => {
     return usuario;
 
 }
+//aca vamos crear una funcion que nos devuelva un usuario por id
+export const getUsuarioById = async userId => {
+    try {
+        const usuario =  await Usuario.findById(userId);  
+        return usuario;
+
+    } catch (error) {
+        console.log(error)
+    }
+    
+}
+
+
 //este metodo va buscar un correo de un usuario
 //findOne ---> busca un campo en especifico
 
 export const getUsuarioByEmail =  async email => {
     return await Usuario.findOne({email})
+}
+
+//actulizar al usuario en la base de datos
+//aca solicitamos userId y los datos a modificar
+export const actualizarUsuario = async (userId,nombre,password) => {
+
+try {
+    //buscar la usuario
+   const usuario =  await getUsuarioById(userId);
+
+   if(!usuario){
+    throw new Error("Usuario no Encontrado")
+   }
+
+   //actualizar nombre  y password 
+   usuario.nombre = nombre;
+   usuario.password = await bcrypt.hash (password,10);
+
+   //aca vamos guardar al usuario
+   return await usuario.save();
+} catch (error) {
+    console.error(error);
+    
+}
+
 }
 

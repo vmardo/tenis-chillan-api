@@ -4,6 +4,7 @@ import express from "express";
 import cors from "cors"
 import productRoutes from "./routes/productoRoute.js";
 import authRoutes from "./routes/authRoutes.js";
+import usuarioRoutes from "./routes/usuarioRoutes.js";
 //aca vamos importar router creado en productoRoute.js
 //aca vamos importar dotenv
 import dotenv from "dotenv"
@@ -39,6 +40,7 @@ app.use(express.json())
 //configuramos las rutas en general
 app.use("/productos",productRoutes)
 app.use("/auth",authRoutes)
+app.use("/usuarios",usuarioRoutes)
 
 
 //levantando servidor del express

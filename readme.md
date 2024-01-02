@@ -93,3 +93,136 @@
 
      
 este es borrador de authController.js
+
+authenticateToken.js
+
+//este archivo nos va servir para proteger los recursos de nuestra API
+//jwt para comprobar la seguridad.
+import jwt from "jsonwebtoken";
+import { getUsuarioById } from "../services/usuarioService.js";
+import dotenv from 'dotenv';
+
+dotenv.config();
+
+//funcion encargada de verificar el token
+   export const authenticateToken = async (req,res,next) => {
+    try {
+      
+       const authorizationHeader = req.headers.authorization;
+
+        const accessToken = authorizationHeader && authorizationHeader.split(" ")[1];
+
+
+        if (!accessToken) {
+            return res.status(401).json({
+                message: "No se ha proporcianado un token de acceso"
+            })
+                
+        }
+        
+        //Para decodificar el TOKEN
+        const tokenDecodificado = jwt.verify(accessToken,process.env.SECRET_KEY);
+        const usuario = await getUsuarioById(tokenDecodificado.userId);
+        if(!usuario){
+            return res.status(401).json({
+                message: "Token de acceso no valido"
+            })
+        }
+        //creando variable de usuario
+
+        //una vez que encuentre el usuario vamos tomar el usuario que pillamos en la base de datos
+        //lo vamos dejar disponible para proximo metodo
+
+        req.usario = usuario;
+        next();
+
+        //acceso al producto llamar a la funcion next
+
+    } catch (error) {
+        
+
+    }
+
+
+}
+
+//editar datos
+
+import React from "react";
+import {
+  Button,
+  Dialog,
+  Card,
+  CardHeader,
+  CardBody,
+  CardFooter,
+  Typography,
+  Input,
+  Checkbox,
+} from "@material-tailwind/react";
+import { useAuth } from "../../context/authContext";
+
+import axios from "axios";
+
+
+function EditarDatos() {
+  const [open, setOpen] = React.useState(false);
+  const handleOpen = () => setOpen((cur) => !cur);
+  const {usuario} = useAuth();
+  //creamos la funcion para la peticion con Axios para el backend
+
+  const actualizarUsuario = async() => {
+    try {
+        const respuesta = await axios.patch(`localhost:3000/usuarios/${usuario._id}`,{
+        email,
+        password,
+    
+    })
+    } catch (error) {
+      
+    }
+  }
+ 
+  return (
+    <>
+      <Button onClick={handleOpen}>Editar</Button>
+      <Dialog
+        size="xs"
+        open={open}
+        handler={handleOpen}
+        className="bg-transparent shadow-none"
+      >
+        <Card className="mx-auto w-full max-w-[24rem]">
+          <CardBody className="flex flex-col gap-4">
+            <Typography variant="h4" color="blue-gray">
+              Edita tus datos personales
+            </Typography>
+
+            <Typography className="-mb-2" variant="h6">
+              Nombre
+            </Typography>
+            <Input label="nombre" size="lg" />
+
+            <Typography className="-mb-2" variant="h6">
+              Rut
+            </Typography>
+            <Input label="rut" size="lg" />
+
+          </CardBody>
+          <CardFooter className="pt-0">
+            <div onClick={actualizarUsuario}>
+            <Button variant="gradient" onClick={handleOpen} fullWidth>
+              Actualizar datos
+            </Button>
+            </div>
+            <Button variant="text" color="gray" onClick={handleOpen} fullWidth>
+                Cancelar
+            </Button>
+          </CardFooter>
+        </Card>
+      </Dialog>
+    </>
+  );
+}
+
+export default EditarDatos
