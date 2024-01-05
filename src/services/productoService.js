@@ -15,4 +15,9 @@ const getProductoById = async productoId => {
     return await Producto.findById(productoId)
 }
 
-export {getAllProductos,getProductoById}
+const getProductosByCategoria = async categoria => {
+    return await Producto.find({categoria: categoria})
+
+}
+
+export {getAllProductos,getProductoById,getProductosByCategoria}

@@ -6,11 +6,9 @@ const productoSchema  = new mongoose.Schema({
     nombre: {type:String, required:true},
     descrpcion: {type:String, required:true},
     url_imagen: {type:String },
-    cantidad: {type:Number },
     tipo: {type:String},
-    disponible_entrega:{type:Boolean},
-    disponible_retiro:{type:Boolean},
-    precio_anterior:{type:Number},
+    categoria: {type:String},
+    porcentajeDescuento:{type:Number},
     precio_actual:{type:Number},
 
 })

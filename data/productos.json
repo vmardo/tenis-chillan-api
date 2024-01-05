@@ -1,0 +1,271 @@
+[
+    {
+      "porcentajeDescuento": 10,
+      "nombre": "Grip Signum Pro Hydro High Perforated + Absorbent",
+      "descripcion": "Grip de máxima absorción y confort con textura perforada para perfeccionar el agarre y sacar lo mejor de ti en cada juego.",
+      "url_imagen": "https://sursports.cl/cdn/shop/files/GRIP02.SIG.jpg?v=1699884609&width=1100",
+      "tipo": "Grip",
+      "categoria": "accesorios",
+      "precio_actual": 6300
+    },
+    {
+      "porcentajeDescuento": 15,
+      "nombre": "Muñequera Yonex 492 Azul Marino",
+      "descripcion": "Muñequera Yonex 492 Azul Marino mantén el sudor a raya con la muñequera de algodón elastizado diseñada con el logo característico de Yonex bordado en un lado.",
+      "url_imagen": "https://locosporeltenis.cl/12361-large_default/munequera-yonex-492-azul-marino.jpg",
+      "tipo": "Muñequeras",
+      "categoria": "accesorios",
+      "precio_actual": 10200
+    },
+    {
+      "porcentajeDescuento": 20,
+      "nombre": "Antivibrador Stopper Yonex Azul X2",
+      "descripcion": "El antivibrador Yonex Vibration Stopper V tiene una nueva estructura de 3 capas que amortigua cualquier vibración no deseada incluso mejor que los amortiguadores regulares. El amortiguador está hecho de caucho de silicona antivibraciones  para reducir efectivamente la sensación de vibración durante un juego intenso.",
+      "url_imagen": "https://sursports.cl/cdn/shop/files/ANT03.YON_a978536a-d9ed-489d-a814-c2b34b65ae0a.jpg?v=1699885548&width=1100",
+      "tipo": "antivibrador",
+      "categoria": "accesorios",
+      "precio_actual": 5592
+    },
+    {
+      "porcentajeDescuento": 25,
+      "nombre": "Bandana Hydrogen Negra Unisex",
+      "descripcion": "Bandana Hydrogen Negra Unisex efecto piqué 100% poliamida con calavera estampada en contraste. La bandana Hydrogen asegura la máxima comodidad y absorción de la transpiración.",
+      "url_imagen": "https://sursports.cl/cdn/shop/files/BAN02.HYD.jpg?v=1699885522&width=1100",
+      "tipo": "Banda",
+      "categoria": "accesorios",
+      "precio_actual": 15000
+    },
+    {
+      "porcentajeDescuento": 12,
+      "nombre": "Mochila Babolat Pure Aero",
+      "descripcion": "Eres un jugador en constante movimiento que necesita llevar 2 raquetas. Con la Mochila Babolat Pure Aero podrás organizar todo tu material gracias a sus compartimentos específicos para raqueta, calzado, accesorios y ropa.",
+      "url_imagen": "https://falabella.scene7.com/is/image/Falabella/gsc_114193569_921491_1?wid=1500&hei=1500&qlt=70",
+      "tipo": "Mochila",
+      "categoria": "accesorios",
+      "precio_actual": 96800
+    },
+    {
+      "porcentajeDescuento": 18,
+      "nombre": "Plantilla Wilson Para Raquetas",
+      "descripcion": "Dale a tu raqueta el toque profesional con una plantilla de logotipo en las cuerdas. Esta plantilla Wilson fácil de usar funciona con cualquier tinta de plantilla de raqueta y es perfecta para jugadores patrocinados por Wilson o por fanáticos de los productos Wilson. Guárdalo en tu bolsa de raqueta para retoques fáciles.",
+      "url_imagen": "https://wilsonstore.cl/cdn/shop/products/WILWRZ7415_002_1000x.jpg?v=1642800780",
+      "tipo": "Plantilla",
+      "categoria": "accesorios",
+      "precio_actual": 6560
+    },
+    {
+      "porcentajeDescuento": 15,
+      "nombre": "Botella de Agua Robin Soderling Tour Edition (700ml)",
+      "descripcion": "Botella de Agua Robin Soderling Tour Edition que imita un tubo de pelota con RS Tour Edition. La botella está hecha de plástico y se puede lavar en el lavavajillas.",
+      "url_imagen": "https://sursports.cl/cdn/shop/files/BOT02.ROB.jpg?v=1699884991&width=1100",
+      "tipo": "Porta Botella",
+      "categoria": "accesorios",
+      "precio_actual": 10200
+    },
+    {
+      "porcentajeDescuento": 10,
+      "nombre": "Pelotas de Tenis Wilson Championship",
+      "descripcion": "Pelotas de tenis Wilson Championship ideales para todo tipo de superficies. Ofrecen durabilidad y consistencia en el rebote.",
+      "url_imagen": "https://tenisygolf.cl/wp-content/uploads/2021/08/WILSON-CHAMPIONSHIP.jpg",
+      "precio_actual": 7191,
+      "tipo": "Presión media",
+      "categoria": "pelotas"
+    },
+    {
+      "porcentajeDescuento": 20,
+      "nombre": "Pelotas de Tenis Babolat French Open",
+      "descripcion": "Pelotas de tenis Babolat French Open con el logo del torneo. Diseñadas para ofrecer un rendimiento excepcional en canchas de arcilla.",
+      "url_imagen": "https://www.deportescarlosmiguel.com/imagebyhash/91d32b77a383e5b28ef92ccfe59e5133869d3b86.jpg",
+      "precio_actual": 7992,
+      "tipo": "Presión alta",
+      "categoria": "pelotas"
+    },
+    {
+      "porcentajeDescuento": 15,
+      "nombre": "Pelotas de Tenis Head Pro",
+      "descripcion": "Pelotas de tenis Head Pro con un fieltro de alta calidad para una excelente jugabilidad. Aprobadas por la ITF para torneos profesionales.",
+      "url_imagen": "https://sparta.cl/media/catalog/product/5/7/571701_2.jpg?quality=80&bg-color=255,255,255&fit=bounds&height=550&width=600&canvas=600:550",
+      "precio_actual": 7641,
+      "tipo": "Presión media",
+      "categoria": "pelotas"
+    },
+    {
+      "porcentajeDescuento": 25,
+      "nombre": "Pelotas de Tenis Dunlop Fort All Court",
+      "descripcion": "Pelotas de tenis Dunlop Fort All Court diseñadas para un rendimiento óptimo en todas las superficies de la cancha. Aprobadas por la ITF.",
+      "url_imagen": "https://dunlopsports.com/wp-content/uploads/2019/01/Updated-ATP-Championship-4-Tin-Image-500x500.jpg",
+      "precio_actual": 8993,
+      "tipo": "Presión media",
+      "categoria": "pelotas"
+    },
+    {
+      "porcentajeDescuento": 10,
+      "nombre": "Pelotas de Tenis Prince Championship",
+      "descripcion": "Pelotas de tenis Prince Championship ideales para jugadores recreativos. Ofrecen durabilidad y consistencia en el rebote.",
+      "url_imagen": "https://cdnx.jumpseller.com/muuk1/image/27019471/resize/640/640?1699376362",
+      "precio_actual": 6291,
+      "tipo": "Presión baja",
+      "categoria": "pelotas"
+    },
+    {
+      "porcentajeDescuento": 10,
+      "nombre": "Wilson Pro Staff RF97 Autograph",
+      "descripcion": "Diseñada en colaboración con Roger Federer, la Wilson Pro Staff RF97 Autograph es una raqueta de tenis para jugadores avanzados. Ofrece potencia y control excepcionales.",
+      "url_imagen": "https://www.wilson.com/es-es/media/catalog/product/article_images/WR043711U_/WR043711U__648a8c41da19090a18d57605a96b61e9.png?dpr=2&fit=bounds&orient=1&quality=95&optimize=high&format=pjpg&auto=webp&enable=upscale&width=778&height=950&canvas=1556%2C1900&bg-color=f5f5f5",
+      "precio_actual": 233991,
+      "grip_size": "4 3/8",
+      "head_size": "97 sq in",
+      "categoria": "raquetas"
+    },
+    {
+      "porcentajeDescuento": 20,
+      "nombre": "Babolat Pure Aero",
+      "descripcion": "La Babolat Pure Aero es conocida por su potencia y efecto. Utilizada por Rafael Nadal, esta raqueta es ideal para jugadores que buscan un juego agresivo y con mucho giro.",
+      "url_imagen": "https://media.babolat.com/image/upload/f_auto,q_auto,c_pad,w_3024,h_3024/v1651570894/Product_Media/2023/TENNIS_RACKETS/EXPERT/101499-Pure_Aero_98-370-1-Face.png",
+      "precio_actual": 239992,
+      "grip_size": "4 1/4",
+      "head_size": "100 sq in",
+      "categoria": "raquetas"
+    },
+    {
+      "porcentajeDescuento": 15,
+      "nombre": "Head Graphene 360+ Speed Pro",
+      "descripcion": "La Head Graphene 360+ Speed Pro es la elección de Novak Djokovic. Ofrece una combinación perfecta de velocidad y control para jugadores avanzados.",
+      "url_imagen": "https://sparta.cl/media/catalog/product/1/3/1300_1_speed_pro_6.jpg?quality=80&bg-color=255,255,255&fit=bounds&height=550&width=600&canvas=600:550",
+      "precio_actual": 237991,
+      "grip_size": "4 3/8",
+      "head_size": "100 sq in",
+      "categoria": "raquetas"
+    },
+    {
+      "porcentajeDescuento": 25,
+      "nombre": "Yonex EZONE 98",
+      "descripcion": "La Yonex EZONE 98 es conocida por su sensación cómoda y su capacidad para brindar potencia y control. Ideal para jugadores intermedios y avanzados.",
+      "url_imagen": "https://locosporeltenis.cl/9154-large_default/ezone-98-g3-305g-2022.jpg",
+      "precio_actual": 172493,
+      "grip_size": "4 1/4",
+      "head_size": "98 sq in",
+      "categoria": "raquetas"
+    },
+    {
+      "porcentajeDescuento": 10,
+      "nombre": "Prince Textreme Tour 100P",
+      "descripcion": "La Prince Textreme Tour 100P ofrece un equilibrio perfecto entre potencia y control. Su diseño aerodinámico la hace ideal para jugadores de nivel intermedio.",
+      "url_imagen": "https://www.tradeinn.com/f/13699/136996818/prince-raqueta-tenis-textreme-tour-100p.jpg",
+      "precio_actual": 179991,
+      "grip_size": "4 1/2",
+      "head_size": "100 sq in",
+      "categoria": "raquetas"
+    },
+    {
+      "porcentajeDescuento": 30,
+      "nombre": "INSTINCT MP Graphene 360+",
+      "descripcion": "El INSTINCT MP, ahora con la innovadora tecnología Graphene 360+, es perfecto para el jugador de torneo avanzado que necesita potencia sin esfuerzo y un nivel muy alto de comodidad.",
+      "url_imagen": "https://sursports.cl/wp-content/uploads/2022/08/Instinct-Mp-3.jpg",
+      "precio_actual": 167993,
+      "grip_size": "4 3/8",
+      "head_size": "95 sq in",
+      "categoria": "raquetas"
+    },
+    {
+      "porcentajeDescuento": 12,
+      "nombre": "Babolat Pure Strike 100",
+      "descripcion": "Nada puede compararse con la sensación de pegarle a la bola exactamente en el punto preciso que querías. Siente el riguroso control de la Raqueta Babolat Pure Strike 100 cuando golpeas con fuerza y pleno de confianza",
+      "url_imagen": "https://media.babolat.com/image/upload/f_auto,q_auto,c_pad,w_3024,h_3024/v1606216289/Product_Media/2020/TENNIS_RACKETS/Expert/Pure%20Strike/Pure%20Strike%20100%20-%20101400/102400-Pure_Strike_100-323-1-face.png",
+      "precio_actual": 184792,
+      "grip_size": "4 1/4",
+      "head_size": "100 sq in",
+      "categoria": "raquetas"
+    },
+    {
+      "porcentajeDescuento": 18,
+      "nombre": "Yonex Percept 100",
+      "descripcion": "La Yonex Percept 100 esta creada para jugadores de nivel intermedio a avanzado que buscan una raqueta flexible, con precisión y sensaciones.",
+      "url_imagen": "https://www.yonex.com/media/catalog/product/i/n/int_01pe100_268-1_1.png?quality=80&fit=bounds&height=819&width=600&canvas=600:819",
+      "precio_actual": 221393,
+      "grip_size": "4 3/8",
+      "head_size": "97 sq in",
+      "categoria": "raquetas"
+    },
+    {
+      "porcentajeDescuento": 10,
+      "nombre": "Polera Hydrogen Técnica Bicolor Spray Amarilla Hombre",
+      "descripcion": "La versión clásica de la camiseta Spray Tech, con el estampado de aerosol solo en las mangas, mientras que el cuerpo presenta el logotipo original de Hydrogen. Sin embargo, mantiene la alta tecnología en sus tejidos para garantizar frescura y libertad de movimiento durante el juego.",
+      "url_imagen": "https://sursports.cl/cdn/shop/files/POL10.HYD.jpg?v=1699882788&width=1100",
+      "tipo": "Polera",
+      "precio_actual": 30000,
+      "categoria": "ropa"
+    },
+    {
+      "porcentajeDescuento": 15,
+      "nombre": "Short Hydrogen Técnico Spray Blanco",
+      "descripcion": "Este pantalón corto ha sido creado para garantizar el máximo confort en la pista, con tejido elástico suave y tecnología que favorece la termorregulación. El estampado Spray está presente solo en una cara para darte un original y único efecto bicolor.",
+      "url_imagen": "https://sursports.cl/cdn/shop/files/SHO03.HYD_2_14718554-df9e-4ad7-9826-a8b38b49db86.jpg?v=1699881445&width=1200",
+      "tipo": "short",
+      "precio_actual": 25500,
+      "categoria": "ropa"
+    },
+    {
+      "porcentajeDescuento": 20,
+      "nombre": "Pantalón Buzo Hydrogen Técnico Blanco",
+      "descripcion": "Pantalón de tejido técnico de alto rendimiento resultado de una investigación innovadora. Corte regular, cintura elástica, bolsillos. La peculiaridad de este pantalón exclusivo es sin duda el tecno-tejido de última generación.",
+      "url_imagen": "https://sursports.cl/cdn/shop/files/PAN01.HYD_4.jpg?v=1704298576&width=1100",
+      "tipo": "pantalon",
+      "precio_actual": 44000,
+      "categoria": "ropa"
+    },
+    {
+      "porcentajeDescuento": 25,
+      "nombre": "Polera Asics Court M Polo Azul",
+      "descripcion": "La CAMISETA COURT POLO cuenta con una mezcla de tejido de punto que se complementa con excelentes propiedades que absorben la humedad para mejorar la comodidad y mantener a los atletas secos en la cancha.",
+      "url_imagen": "https://somos-tenis.cl/wp-content/uploads/2021/12/Diapositiva4-5.jpg",
+      "tipo": "polera",
+      "precio_actual": 15000,
+      "categoria": "ropa"
+    },
+    {
+      "porcentajeDescuento": 12,
+      "nombre": "Polera Joma Mujer tirantes Siena II Coral Fluor",
+      "descripcion": "Polera Joma Mujer tirantes Siena II Coral Fluor de mujer/niña. Destaca por ser muy ligera y por favorecer la transpiración. Así, la frescura y la sequedad del cuerpo estarán garantizadas durante la práctica deportiva.",
+      "url_imagen": "https://sursports.cl/cdn/shop/files/PoleraJomaMujertirantesSienaIICoralFluor_1.jpg?v=1703852438&width=1100",
+      "tipo": "polera",
+      "precio_actual": 11431,
+      "categoria": "ropa"
+    },
+    {
+      "porcentajeDescuento": 18,
+      "nombre": "Chaqueta Joma Montreal Verde Negra",
+      "descripcion": "Chaqueta Joma Montreal Verde Negra concebida para entrenamientos de tenis y pádel. Modelo para hombre/niño. Con cierre de cremallera y cuello alto para abrigar la zona y elevar el confort del tenista.",
+      "url_imagen": "https://sursports.cl/cdn/shop/files/CHAQ02.JOM.jpg?v=1704205183&width=1100",
+      "tipo": "chaqueta",
+      "precio_actual": 40991,
+      "categoria": "ropa"
+    },
+    {
+      "porcentajeDescuento": 15,
+      "nombre": "Falda Nox Team Roja Logo Blanco",
+      "descripcion": "Falda Nox Team Roja Logo Blanco confeccionada con tejido ligero y elástico. Incorpora la tecnología “Balance Fresh” de NOX para un máximo confort en el juego.",
+      "url_imagen": "https://tiendaapasur.cl/wp-content/uploads/2023/05/Falda-Nox-Team-Roja-Logo-Blanco-6.jpg",
+      "tipo": "falda",
+      "precio_actual": 29750,
+      "categoria": "ropa"
+    },
+    {
+      "porcentajeDescuento": 15,
+      "nombre": "Polera Hydrogen Básica Técnica Negra Logo Centro Hombre",
+      "descripcion": "La camiseta técnica básica es la camiseta Hydrogen por excelencia, Es de poliamida de alta tecnología diseñado para el máximo rendimiento en el juego. ",
+      "url_imagen": "https://www.tennispro.es/media/catalog/product/cache/7/thumbnail/1200x/9df78eab33525d08d6e5fb8d27136e95/t/0/t00512-007_noir_1.jpg",
+      "tipo": "polera",
+      "precio_actual": 425000,
+      "categoria": "ropa"
+    },
+    {
+      "porcentajeDescuento": 15,
+      "nombre": "Short Joma Open III Azul Marino Franja Amarilla",
+      "descripcion": "Short con bolsillos y cintura elástica ajustable mediante cordones. Incluye aberturas en los laterales para aumentar la libertad de movimiento. Logotipo bordado.",
+      "url_imagen": "https://sursports.cl/cdn/shop/files/SHO14.JOM.jpg?v=1699881308&width=1100",
+      "tipo": "short",
+      "precio_actual": 20400,
+      "categoria": "ropa"
+    }
+  ]

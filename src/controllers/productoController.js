@@ -1,6 +1,6 @@
 //servicio lo comunicamos con controlador.
 //los controladores son los encargados en procesar las solicitudes http(buscar un producto,crear un producto,etc)
-import { getAllProductos,getProductoById } from "../services/productoService.js";
+import { getAllProductos,getProductoById,getProductosByCategoria } from "../services/productoService.js";
 
 //los controladores manejan (req,res); req---> solicitudes http y res--->respuesta del usuario.
 //generamos dos funciones asociado a lo importado.Vamos generar un try y catch para manejar posibles errores.
@@ -29,7 +29,20 @@ const getProductoByIdController = async (req,res) => {
 
 }
 
+const getProductosByCategoriaController = async (req,res) => {
+    const categoria = req.params.categoria;
+
+    try {
+        
+        const productos = await getProductosByCategoria(categoria);
+        res.status(200).json(productos)
+    } catch (error) {
+        res.status(500).json({error:error.message})
+    }
+}
+
 export {
     getAllProductosController as getAllProductos,
-    getProductoByIdController as getProductoById
+    getProductoByIdController as getProductoById,
+    getProductosByCategoriaController  as getProductosByCategoria
 }
