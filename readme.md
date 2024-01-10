@@ -226,3 +226,50 @@ function EditarDatos() {
 }
 
 export default EditarDatos
+
+carritoContext.jsx
+import { createContext,useContext,useState } from "react";
+
+//createContext para crear el contexto,useContext para acceder al contexto y useState es el State global del carrito.
+
+//Partimos creando el Contexto 
+const CarritoContext = createContext();
+
+//provider es donde colocamos nuestros state y nuestras funciones vamos ocupar mas adelante
+
+export const CarritoProvider = ({children}) => {
+    
+    const [carrito, setCarrito] = useState([]);
+
+    const agregarProducto = producto => {
+
+        console.log("agregando al carrito");      
+    }
+
+    const eliminarProducto = productoId => {
+
+    } 
+
+    const vaciarCarrito = () =>  setCarrito([]);
+
+    const calcularTotal = () => {
+
+    }
+        return (
+            <CarritoContext.Provider
+                value={{
+
+                    carrito,
+                    agregarProducto,
+                    vaciarCarrito,
+                    calcularTotal
+                }}
+            >{children}</CarritoContext.Provider>  
+        )
+       
+    }
+}
+
+export const useCarrito = ()=> {
+    return useContext(CarritoContext);
+}
