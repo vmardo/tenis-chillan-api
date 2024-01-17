@@ -273,3 +273,108 @@ export const CarritoProvider = ({children}) => {
 export const useCarrito = ()=> {
     return useContext(CarritoContext);
 }
+
+
+//payment Controller 
+import axios from "axios";
+import {HOST,PAYPAL_API,PAYPAL_API_CLIENT,PAYPAL_API_SECRET} from "../config/config.js";
+
+//aca vamos hacer el codigo nos permitara conectarnos a PAYPLAY 
+
+export const createOrder = async (req,res) => {
+
+    //definiendo la orden 
+    try {
+        
+
+        const order = {
+            intent: "CAPTURE",
+            purchase_units: [
+                {
+                    amount: {
+                        currency_code: "USD",
+                        value: "100"
+                    }
+                },
+                
+            ],
+
+            application_context: {
+
+                brand_name: "tenis-chillan.com",
+                landing_page: "NO_PREFERENCE",
+                user_action : "PAY_NOW",
+                return_url:`${HOST}/pagos/capture-order`, 
+                cancel_url:`${HOST}/pagos/cancel-payment` 
+
+            }
+
+        }
+
+        //obteniendo token de acceso 
+        const params = new URLSearchParams();
+        params.append("grant_type","client_credentials");
+        //Ahora hacemos la peticion con axios para obtener el Token
+        const respuesta = await axios.post(
+            `${PAYPAL_API}/v1/oauth2/token` ,  
+            params, 
+            {
+                headers: {
+                    "Content-Type" : "aplication/x-www-form-urlencoded"
+                },
+                auth: {
+                    username: PAYPAL_API_CLIENT,
+                    password: PAYPAL_API_SECRET
+                }
+            }
+        )
+
+        const token_acceso = respuesta.data.access_token;
+
+        //peticion para crear la orden de compra 
+
+        const orderPaypal = await axios.post(
+            `${PAYPAL_API}/v2/checkout/orders`,
+            order,
+            {
+                headers: {
+                    Authorization: `Bearer ${token_acceso}`
+                }
+            }
+        )
+
+        return res.json(orderPaypal.data)
+    } catch (error) {
+        console.log(error)
+        return res.status(500).json("Algo salio mal")
+    }
+   
+
+}
+
+export const captureOrder = async(req,res)=> {
+
+    const {token} = req.query;
+
+    try {
+        const respuesta = await axios.post(
+            `${PAYPAL_API}/v2/checkout/orders/${token}/capture`,
+            {},
+            {
+                auth: {
+                    username: PAYPAL_API_CLIENT,
+                    password: PAYPAL_API_SECRET
+                }
+            }
+        )    
+
+        return res.json(respuesta.data)
+
+    } catch (error) {
+        console.log(error)
+    }
+
+    console.log("confirmando orden ..."+ token )
+    return res.json("orden pagada")
+}
+

@@ -1,8 +1,7 @@
 import jwt from 'jsonwebtoken';
 import { getUsuarioById } from '../services/usuarioService.js';
-import dotenv from 'dotenv';
+import { SECRET_KEY } from '../config/config.js';
 
-dotenv.config();
 
 //funcion encargada de verificar el token
 export const authenticateToken = async (req, res, next) => {
@@ -19,7 +18,7 @@ export const authenticateToken = async (req, res, next) => {
             })
         }
 
-        const tokenDecodificado = jwt.verify(accessToken, process.env.SECRET_KEY );
+        const tokenDecodificado = jwt.verify(accessToken,SECRET_KEY );
         const usuario = await getUsuarioById(tokenDecodificado.userId);
 
         if(!usuario){

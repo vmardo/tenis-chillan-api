@@ -5,17 +5,17 @@ import cors from "cors"
 import productRoutes from "./routes/productoRoute.js";
 import authRoutes from "./routes/authRoutes.js";
 import usuarioRoutes from "./routes/usuarioRoutes.js";
+import paymentRoutes from "./routes/paymentRoutes.js"
 //aca vamos importar router creado en productoRoute.js
 //aca vamos importar dotenv
-import dotenv from "dotenv"
+import {PORT} from "./config/config.js"
 import { conectDb } from "./db.js";
 //METODO DE DOTENV
-dotenv.config();
+
 
 //indicando a nuestra aplicacion que utilizaremos express(instancia de express)
 const app = express();
 //nuestro puerto va tomar el valor que devuelva dotenv
-const PORT = process.env.PORT || 3000 ;
 
 //crear ruta
 //req:este objeto contiene informacion sobre la solicitud del cliente
@@ -41,6 +41,7 @@ app.use(express.json())
 app.use("/productos",productRoutes)
 app.use("/auth",authRoutes)
 app.use("/usuarios",usuarioRoutes)
+app.use("/pagos",paymentRoutes)
 
 
 //levantando servidor del express

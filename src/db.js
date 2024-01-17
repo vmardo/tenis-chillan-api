@@ -1,9 +1,10 @@
 //configuracion para la conexion a la base de datos
-import dotenv from "dotenv";
+
 import mongoose from "mongoose"
+import { MONGODB_URI } from "./config/config.js"
 
 //METODO DE DOTENV
-dotenv.config();
+
 
 //funcion para conectarnos a la base de datos
 //este recibi una uri de coneccion

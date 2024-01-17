@@ -1,9 +1,10 @@
 import {crearUsuario, getUsuarioByEmail} from '../services/usuarioService.js';
 import bcrypt from 'bcrypt'
 import jwt from 'jsonwebtoken'
-import dotenv from 'dotenv';
+import { SECRET_KEY } from '../config/config.js';
 
-dotenv.config();
+
+
 
 export const register = async (req, res) => {
 
@@ -27,7 +28,7 @@ export const register = async (req, res) => {
         const usuario = await crearUsuario(nombre, email, password);
 
         //GENERAR TOKEN DE ACCESO
-        const accessToken = jwt.sign( { userId: usuario._id}, process.env.SECRET_KEY, { expiresIn: '1h' } );
+        const accessToken = jwt.sign( { userId: usuario._id},SECRET_KEY, { expiresIn: '1h' } );
 
         res.status(201).json({
             accessToken
@@ -69,7 +70,7 @@ export const login = async (req, res) => {
 
         //en esta seccion ya hemos validado un login exitoso
         //GENERAR TOKEN DE ACCESO
-        const accessToken = jwt.sign( { userId: usuario._id}, process.env.SECRET_KEY, { expiresIn: '1h' } );
+        const accessToken = jwt.sign( { userId: usuario._id},SECRET_KEY, { expiresIn: '1h' } );
 
         res.status(201).json({
             accessToken
